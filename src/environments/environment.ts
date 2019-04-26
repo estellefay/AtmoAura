@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ROOT_URL : 'https://api.atmo-aura.fr',
+  key : 'd8f8ba259ae810488d3f808d4893f2b1'
 };
 
 /*
