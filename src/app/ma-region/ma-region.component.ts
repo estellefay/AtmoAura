@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 
@@ -29,7 +28,6 @@ export class MaRegionComponent implements OnInit {
     this.http.get(environment.ROOT_URL + '/commentaire?date=now&api_token=' + environment.key)
       .toPromise().then((response: any) => {
       this.messageRegion = response.commentaire;
-      console.log(this.messageRegion);
     });
   }
 

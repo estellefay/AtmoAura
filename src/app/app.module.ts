@@ -10,6 +10,8 @@ import { PrevisionComponent } from './prevision/prevision.component';
 import { MaRegionComponent } from './ma-region/ma-region.component';
 import { AtmoNowComponent } from './atmo-now/atmo-now.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { AtmoNowComponent } from './atmo-now/atmo-now.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
