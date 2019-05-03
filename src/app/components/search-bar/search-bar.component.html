@@ -1,0 +1,30 @@
+
+<!-- <form class="">
+<!--  Je ne retrouve pas la value du formulaire, mettre en place ng form-->
+  <!-- <input class="" type="search" placeholder="Search" aria-label="Search" value="{{}}">
+  <button class="" type="submit" (click)="searchCommune()">Search</button>
+</form> -->
+<!-- 
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+    <button class="" type="submit" (click)="searchCommune()">Search</button>
+  </mat-form-field> -->
+
+  <div class="example-container">
+    <form #form="ngForm" (submit)="searchCommune(form)" class="example-container">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Ecriver votre commune" name="nameComnune" #nameComnune="ngModel" [(ngModel)]="service.formData.NameCommuneSearch" required>
+      </mat-form-field>
+      <button mat-flat-button color="warn">Rechercher</button>  
+    </form>
+  </div>
+      <li *ngFor="let region of listregions">
+          {{region.commune}}
+      </li>
+
+

@@ -16,6 +16,7 @@ export class MaRegionComponent implements OnInit {
   messageRegion: Observable<any>;
 
 
+
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
