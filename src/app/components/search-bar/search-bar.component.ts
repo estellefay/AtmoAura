@@ -1,13 +1,8 @@
-
-import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Component, OnInit} from '@angular/core';
 import { Subject } from 'rxjs';
 import { NgForm} from '@angular/forms';
 import { CommuneService } from 'src/app/services/commune.service';
-import { Commune } from '../../models/commune.model';
-import { formArrayNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
-import {map, startWith} from 'rxjs/operators';
+
 
 
 
@@ -26,20 +21,8 @@ export class SearchBarComponent implements OnInit {
     protected service:CommuneService
     ) { }
 
-  ngOnInit(form?: NgForm) {
-    while (form != null) {
-      console.log('coucou');
-    }
+  ngOnInit() {
   }
-
-  //Méthode qui récupère le message de la région
-  // searchCommune(form: NgForm) {
-  //   this.service.SearchComumune().then((res: any) => {
-  //     this.listregions = res.data;
-  //     console.log(res.data);
-  //   })
-  //   console.log(this.listregions)
-  // }
   
   searchCommune(nameCommune) {
     this.service.SearchComumune(nameCommune).then((res: any) => {
@@ -49,8 +32,12 @@ export class SearchBarComponent implements OnInit {
     this.searchTerms.next(nameCommune);
   }
 
-  test(codeINSEE) {
-    console.log(codeINSEE);
-    debugger;
+  GetIndiceCommune(codeINSEE) {
+    this.service.IndiceComumune(codeINSEE).then((res: any) => {
+      console.log(res);
+    })
+    this.listregions = null;
+    //Remise à zero de serach commune
   }
 }
+

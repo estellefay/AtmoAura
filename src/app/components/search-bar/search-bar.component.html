@@ -6,12 +6,11 @@
 </form> -->
 
   <div id="search-component">
-      <h4>Hero Search</h4>
     <input #searchBox id="search-box" matInput placeholder="Ecriver votre commune"
       (input)="searchCommune(searchBox.value)" required>
     <ul class="search-result">
       <li *ngFor="let region of listregions">
-        <a (click)="test(region.code_insee)">{{region.commune}}</a>
+        <a (click)="GetIndiceCommune(region.code_insee)">{{region.commune}}</a>
       </li>
     </ul>
   </div>
