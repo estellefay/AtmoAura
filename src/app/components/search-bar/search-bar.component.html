@@ -6,6 +6,7 @@
 </form> -->
 
   <div id="search-component">
+      <h4>Hero Search</h4>
     <input #searchBox id="search-box" matInput placeholder="Ecriver votre commune"
       (input)="searchCommune(searchBox.value)" required>
     <ul class="search-result">
@@ -14,6 +15,17 @@
       </li>
     </ul>
   </div>
+
+<!-- <mat-form-field id="search-component">
+  <input #searchBox id="search-box" matInput placeholder="Ecriver votre commune"
+    (input)="searchCommune(searchBox.value)" required>
+  <mat-autocomplete class="search-result">
+    <mat-option *ngFor="let region of listregions">
+      {{region}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field> -->
+
       <!-- <li *ngFor="let region of listregions">
           {{region.commune}}
       </li> -->
