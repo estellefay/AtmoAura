@@ -1,4 +1,4 @@
-export class SearchBar {
+export class Commune {
     NameCommuneSearch: string;
 }
 

@@ -13,7 +13,9 @@ import { environment } from 'src/environments/environment';
 export class MaRegionComponent implements OnInit {
 
   // Déclaration de variable
-  messageRegion: Observable<any>;
+  //essageRegion: Observable<any>;
+  messageRegion: string;
+
 
 
 
@@ -28,8 +30,11 @@ export class MaRegionComponent implements OnInit {
     // Transformer une observable en promesse pour récuprer sa reponse
     this.http.get(environment.ROOT_URL + '/commentaire?date=now&api_token=' + environment.key)
       .toPromise().then((response: any) => {
-      this.messageRegion = response.commentaire;
+        if (response.commentaire === null) {
+           this.messageRegion = "Pas de commentaire aujourdhui" ;        
+        } else {
+          this.messageRegion = response.commentaire;
+        }
     });
   }
-
 }
