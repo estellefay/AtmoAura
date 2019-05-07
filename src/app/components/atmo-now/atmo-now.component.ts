@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommuneService } from 'src/app/services/commune.service';
 
 
@@ -8,6 +8,8 @@ import { CommuneService } from 'src/app/services/commune.service';
   styleUrls: ['./atmo-now.component.scss']
 })
 export class AtmoNowComponent implements OnInit {
+
+
 
   constructor(
     protected service:CommuneService

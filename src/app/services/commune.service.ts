@@ -25,7 +25,7 @@ export class CommuneService {
 
   VigilenceComumune(codeINSEE) {
     return this.http.get(environment.ROOT_URL + '/communes/' + codeINSEE + '/vigilances?date=now&api_token=' + environment.key)
-      .toPromise();
+      .toPromise();    
   }
 
 }

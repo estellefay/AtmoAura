@@ -4,7 +4,25 @@
       (input)="searchCommune(searchBox.value)" required>
     <ul class="search-result">
       <li *ngFor="let region of listregions">
-        <a (click)="test(region.code_insee)">{{region.commune}}</a>
+        <a (click)="GetInfoCommune(region.code_insee)">{{region.commune}}</a>
       </li>
     </ul>
   </div>
+
+<div class="container">
+  <div class="indiceCommune" *ngIf="indicesCommune">
+    <h3>{{ nameCommune }}</h3>
+    <div [style]="getBackground(indicesCommune.couleur_html)" class="carre">
+      <p>{{indicesCommune.qualificatif}}</p>
+      <p>{{indicesCommune.valeur | number:'1.0-0'}} </p>
+    </div>
+
+    <h4>Recomandations :</h4>
+    <div>
+      <p>Conseil</p>
+    </div>
+  </div>
+  <div class="indiceRegion">
+    <app-ma-region></app-ma-region>
+  </div>
+</div>

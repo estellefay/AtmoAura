@@ -23,6 +23,7 @@
 .search-result li a:hover {
   color: white;
 }
+
 .search-result li a:active {
   color: white;
 }
@@ -36,3 +37,25 @@ ul.search-result {
   margin-top: 0;
   padding-left: 0;
 }
+
+.carre {
+  width:80px;
+  height:80px;
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+
+
+ .container {
+   display: flex;
+ }
+
+ .indiceCommune {
+  width: 50%;
+ }
+
+ .indiceRegion {
+  width: 50%;
+ }
