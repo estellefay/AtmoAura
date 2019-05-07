@@ -4,11 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AtmoTestComponent } from './components/atmo-test/atmo-test.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { PrevisionComponent } from './components/prevision/prevision.component';
 import { MaRegionComponent } from './components/ma-region/ma-region.component';
-import { AtmoNowComponent } from './components/atmo-now/atmo-now.component';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,11 +25,9 @@ import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
-    AtmoTestComponent,
     SearchBarComponent,
     PrevisionComponent,
     MaRegionComponent,
-    AtmoNowComponent
   ],
   imports: [
     BrowserModule,
