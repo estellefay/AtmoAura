@@ -57,7 +57,7 @@ export class SearchBarComponent implements OnInit {
       if (res.vigilances != null) {
         this.vigilanceCommune = res.vigilances;
       } else {
-        this.vigilanceCommune = " Pas de vigilence particulière aujourdhui sur votre commune"
+        this.vigilanceCommune = " Pas de vigilence particulière"
       }
     })
     this.listregions = null;
