@@ -32,12 +32,9 @@ export class SearchBarComponent implements OnInit {
     this.searchTerms.next(nameCommune);
   }
 
-  GetIndiceCommune(codeINSEE) {
-    this.service.IndiceComumune(codeINSEE).then((res: any) => {
-      console.log(res);
-    })
+  test(codeinse) {
+    console.log(codeinse);
     this.listregions = null;
-    //Remise à zero de serach commune
   }
 }
 

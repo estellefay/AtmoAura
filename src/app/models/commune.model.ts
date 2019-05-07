@@ -1,5 +1,5 @@
 export class Commune {
     NameCommuneSearch: string;
-    codeINSEE: string;
+    code: any;
 }
 
